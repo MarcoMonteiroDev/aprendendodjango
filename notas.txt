@@ -1,0 +1,1 @@
+no terminal coloco o comanto pip freeze > requirements.txt para criar um arquivo com os requisitos do sistema
