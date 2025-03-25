@@ -16,7 +16,7 @@ class PostAdmin(admin.ModelAdmin):
         qs = super(PostAdmin, self).get_queryset(request)
         return qs.filter(autor = request.user)
     
-
+    #metodo para somente o autor fazer postagem
     def save_model(self, request, obj, form, change):
         obj.autor = request.user
         super().save_model(request, obj, form, change)
