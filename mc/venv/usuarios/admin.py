@@ -16,3 +16,10 @@ class CustomUsuarioAdmim(UserAdmin):
         ('Permissões',{'fields': ('is_active','is_staff','is_superuser','groups','user_permissions')}),
         ('Datas Importantes', {'fields': ('last_login', 'date_joined')}),
     )
+    #o add fieldsets necessario para quando add um usuario
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('email', 'password1', 'password2', 'first_name', 'last_name', 'fone', 'is_staff', 'is_superuser'),
+        }),
+    )
